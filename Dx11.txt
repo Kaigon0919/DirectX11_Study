@@ -1,0 +1,17 @@
+1 - 1. VisualStudio Update - Windows 10 SDK 설치
+1 - 2. https://www.microsoft.com/en-us/download/details.aspx?id=6812 - 제일무난.
+1 - 3. https://developer.microsoft.com/en-us/windows/downloads - 윈도우 10 용 Windows 독립 SDK
+
+d3d11.lib
+d3dx11d.lib
+D3DCompiler.lib
+Effects11d.lib
+dxerr.lib
+dxgi.lib
+dxguid.lib
+
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86
+
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include
+
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86
