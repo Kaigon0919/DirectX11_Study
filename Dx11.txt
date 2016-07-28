@@ -1,4 +1,4 @@
-// 셋 중하나 다운로드 후 설치, 공부용으로는 1-2가 제일 많이 쓰인다.
+// 셋 중 하나 다운로드 후 설치, 공부용으로는 1-2가 제일 많이 쓰인다.
 1 - 1. VisualStudio Update - Windows 10 SDK 설치
 1 - 2. https://www.microsoft.com/en-us/download/details.aspx?id=6812 - 제일 무난. 구 버전, Jun10
 1 - 3. https://developer.microsoft.com/en-us/windows/downloads - 윈도우 10 용 Windows 독립 SDK
