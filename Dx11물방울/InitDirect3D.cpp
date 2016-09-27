@@ -2,7 +2,7 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, int showCmd)
 {
-	// µð¹ö±× ºôµåÀÇ °æ¿ì ½ÇÇà½ÃÁ¡ ¸Þ¸ð¸® Á¡°Ë ±â´ÉÀ» ÄÒ´Ù.
+	// ë””ë²„ê·¸ ë¹Œë“œì˜ ê²½ìš° ì‹¤í–‰ì‹œì  ë©”ëª¨ë¦¬ ì ê²€ ê¸°ëŠ¥ì„ ì¼ ë‹¤.
 #if defined(DEBUG) | defined(_DEBUG)
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
@@ -35,15 +35,16 @@ void InitDirect3DApp::OnResize()
 void InitDirect3DApp::UpdateScene(float dt)
 {
 }
-
 void InitDirect3DApp::DrawScene()
 {
 	assert(md3dImmediateContext);
 	assert(mSwapChain);
-
-	//ÈÄ¸é ¹öÆÛ¸¦ ÆÄ¶õ»öÀ¸·Î Áö¿î´Ù. Colors::Blue´Â d3dUtil.h.¿¡ Á¤ÀÇ.
+	
+	//í›„ë©´ ë²„í¼ë¥¼ íŒŒëž€ìƒ‰ìœ¼ë¡œ ì§€ìš´ë‹¤. Colors::BlueëŠ” d3dUtil.h.ì— ì •ì˜.
+	md3dImmediateContext->ClearRenderTargetView(mRenderTargetView, reinterpret_cast<const float*>(&Colors::LightSteelBlue));
+	// ê¹Šì´ ë²„í¼ë¥¼ 1.0fë¡œ, ìŠ¤í…ì‹¤ ë²„í¼ë¥¼ 0ìœ¼ë¡œ ì§€ìš´ë‹¤.
 	md3dImmediateContext->ClearDepthStencilView(mDepthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
-	//ÈÄ¸é ¹öÆÛ¸¦ È­¸é¿¡ Á¦½ÃÇÑ´Ù.
+	//í›„ë©´ ë²„í¼ë¥¼ í™”ë©´ì— ì œì‹œí•œë‹¤.
 	HR(mSwapChain->Present(0, 0));
 }
